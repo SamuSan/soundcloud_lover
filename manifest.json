@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Love Dat Bruh",
+  "description": "This extension allows you to love a song on Soundcloud from anywhere in the browser",
+    "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "love_soundcloud_icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://www.soundcloud.com/",
+    "*://*/*"
+  ]
+}
