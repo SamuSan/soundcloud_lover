@@ -23,7 +23,7 @@ function getSoundCloudTabIndex(callback) {
 document.addEventListener('DOMContentLoaded', function() {
   getSoundCloudTabIndex(function(tabId) {
     if(tabId > -1) {
-      chrome.tabs.executeScript(tabId, { code: "document.getElementsByClassName(\"playbackSoundBadge__like\")[0].click()"});
+      chrome.tabs.executeScript(tabId, { code: "var like_button = document.getElementsByClassName(\"playbackSoundBadge__like\")[0];if (like_button.title === \"Like\") {like_button.click();}"});
     }
   });
   window.close();
